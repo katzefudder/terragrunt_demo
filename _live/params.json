@@ -1,0 +1,4 @@
+{
+  "environment": "live",
+  "database_name": "live-db"
+}
