@@ -23,5 +23,5 @@ jobs:
     - name: 'Terragrunt Apply _nonlive'
       run: cd _nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
     - name: 'Terragrunt Apply _live'
-      run: cd _nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
+      run: cd _live && terragrunt init && terragrunt apply --auto-approve --input=false
     
