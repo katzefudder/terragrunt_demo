@@ -1,7 +1,0 @@
-{
-  "aws_region": "eu-central-1",
-  "account_name": "nonlive",
-  "aws_account_id": "replaceme",
-  "aws_profile": "nonlive",
-  "s3_bucket": "some_s3_bucket_for_your_tf_state"
-}
