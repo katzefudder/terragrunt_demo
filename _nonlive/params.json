@@ -1,4 +1,4 @@
 {
   "environment": "nonlive",
-  "database_name": "nonlive-db"
+  "counter": "1"
 }

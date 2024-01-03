@@ -1,4 +1,4 @@
 {
   "environment": "live",
-  "database_name": "live-db"
+  "counter": "2"
 }
