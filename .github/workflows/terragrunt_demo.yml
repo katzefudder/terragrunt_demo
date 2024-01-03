@@ -1,0 +1,27 @@
+name: Demo for Terragrunt
+on:
+  - push
+  - pull_request
+env:
+  tf_version: 'latest'
+  tg_version: 'latest'
+  tf_working_dir: '_nonlive'
+jobs:
+  build_demo_project:
+    runs-on: ubuntu-latest
+    name: Terragrunt Demo Project
+    steps:
+    - name: Install tfenv
+      run: git clone https://github.com/tfutils/tfenv.git ~/.tfenv && sudo rm /usr/local/bin/terraform && sudo ln -s ~/.tfenv/bin/* /usr/local/bin
+    - name: Install tgenv
+      run: git clone https://github.com/cunymatthieu/tgenv.git ~/.tgenv && sudo ln -s ~/.tgenv/bin/* /usr/local/bin
+    - name: 'Checkout'
+      uses: actions/checkout@master
+    - name: Install required Terraform & Terragrunt versions
+      run: cd environments && tfenv install && tgenv install
+    #### Terraforming
+    - name: 'Terragrunt Apply _nonlive'
+      run: cd _nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
+    - name: 'Terragrunt Apply _live'
+      run: cd _nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
+    
