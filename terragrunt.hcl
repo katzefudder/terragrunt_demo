@@ -4,7 +4,7 @@ locals {
 }
 
 terraform {
-  source = "../"
+  source = "../../terraform"
 }
 
 inputs = merge (
