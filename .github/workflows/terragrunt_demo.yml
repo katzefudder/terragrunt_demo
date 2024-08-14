@@ -5,7 +5,7 @@ on:
 env:
   tf_version: 'latest'
   tg_version: 'latest'
-  tf_working_dir: '_nonlive'
+  tf_working_dir: 'nonlive'
 jobs:
   build_demo_project:
     runs-on: ubuntu-latest
@@ -20,8 +20,8 @@ jobs:
     - name: Install required Terraform & Terragrunt versions
       run: tfenv install && tgenv install
     #### Terraforming
-    - name: 'Terragrunt Apply _nonlive'
-      run: cd _nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
-    - name: 'Terragrunt Apply _live'
-      run: cd _live && terragrunt init && terragrunt apply --auto-approve --input=false
+    - name: 'Terragrunt Apply nonlive'
+      run: cd environment/nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
+    - name: 'Terragrunt Apply live'
+      run: cd environment/live && terragrunt init && terragrunt apply --auto-approve --input=false
     
