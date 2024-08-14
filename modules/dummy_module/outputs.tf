@@ -1,3 +1,3 @@
 output "counter" {
-  value = var.counter * 2
+  value = var.counter
 }
