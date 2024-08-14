@@ -21,7 +21,7 @@ jobs:
       run: tfenv install && tgenv install
     #### Terraforming
     - name: 'Terragrunt Apply nonlive'
-      run: cd environment/nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
+      run: cd environments/nonlive && terragrunt init && terragrunt apply --auto-approve --input=false
     - name: 'Terragrunt Apply live'
-      run: cd environment/live && terragrunt init && terragrunt apply --auto-approve --input=false
+      run: cd environments/live && terragrunt init && terragrunt apply --auto-approve --input=false
     
