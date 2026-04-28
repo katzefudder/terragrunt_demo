@@ -1,3 +1,7 @@
+output "application_name" {
+  value = var.application
+}
+
 output "environment" {
   value = var.environment
 }

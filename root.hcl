@@ -1,6 +1,7 @@
 terraform_binary = "terraform"
 
 locals {
+  application = "demo-application"
   environment_vars = jsondecode(file("${path_relative_to_include()}/params.json"))
   environment = basename(get_terragrunt_dir())
 }
@@ -15,7 +16,7 @@ generate "backend" {
   contents  = <<EOF
 terraform {
   backend "local" {
-    path = "${get_parent_terragrunt_dir()}/application_${local.environment}.tfstate"
+    path = "${get_parent_terragrunt_dir()}/${local.application}_${local.environment}.tfstate"
   }
 }
 EOF

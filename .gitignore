@@ -20,10 +20,6 @@ override.tf.json
 *.tfplan
 *.plan
 
-# Variable files containing sensitive or local values
-*.tfvars
-*.tfvars.json
-
 # Terragrunt cache and generated files
 .terragrunt-cache/
 **/.terragrunt-cache/*
