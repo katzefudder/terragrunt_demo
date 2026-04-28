@@ -38,8 +38,8 @@ According to the chosen environment, one would execute `terragrunt` like so:
 
 Creating a plan to see what would have been executed:
 
-`cd environment/dev && terragrunt plan`
+`cd environments/dev && terragrunt plan`
 
 Execute the plan:
 
-`cd environment/dev && terragrunt apply`
+`cd environments/dev && terragrunt apply`
